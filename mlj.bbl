@@ -1,0 +1,206 @@
+\begin{thebibliography}{10}
+\providecommand{\url}[1]{{#1}}
+\providecommand{\urlprefix}{URL }
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{DOI~\discretionary{}{}{}#1}\else
+  \providecommand{\doi}{DOI~\discretionary{}{}{}\begingroup
+  \urlstyle{rm}\Url}\fi
+
+\bibitem{rakesh1995}
+Agrawal, R., Srikant, R.: Mining sequential patterns.
+\newblock In: ICDE (1995)
+
+\bibitem{antunes2003}
+Antunes, C., Oliveira, A.L.: Generalization of pattern-growth methods for
+  sequential pattern mining with gap constraints.
+\newblock In: MLDM (2003)
+
+\bibitem{bitSpade}
+Aseervatham, S., Osmani, A., Viennet, E.: bitspade: A lattice-based sequential
+  pattern mining algorithm using bitmap representation.
+\newblock In: ICDM (2006)
+
+\bibitem{gehrke2002}
+Ayres, J., Gehrke, J., Yiu, T., Flannick, J.: Sequential pattern mining using a
+  bitmap representation.
+\newblock In: KDD (2002)
+
+\bibitem{Benveniste_90}
+Benveniste, A., Priouret, P., M{\'e}tivier, M.: Adaptive algorithms and
+  stochastic approximations.
+\newblock Springer-Verlag New York, Inc., New York, NY, USA (1990)
+
+\bibitem{Bertsekas_97}
+Bertsekas, D.P., Tsitsiklis, J.N.: Parallel and Distributed Computation:
+  Numerical Methods.
+\newblock Athena Scientific, Belmont, MA. (1997)
+
+\bibitem{bottou-98x}
+Bottou, L.: Online algorithms and stochastic approximations.
+\newblock In: D.~Saad (ed.) Online Learning and Neural Networks. Cambridge
+  University Press, Cambridge, UK (1998).
+\newblock \urlprefix\url{http://leon.bottou.org/papers/bottou-98x}.
+\newblock Revised, oct 2012
+
+\bibitem{Bottou_05}
+Bottou, L., Le~Cun, Y.: On-line learning for very large data sets.
+\newblock Applied Stochastic Models in Business and Industry \textbf{21}(2),
+  137--151 (2005)
+
+\bibitem{Boyd_04}
+Boyd, S., Vandenberghe, L.: Convex Optimization.
+\newblock Cambridge University Press, New York, NY, USA (2004)
+
+\bibitem{ChalamallaNSR08}
+Chalamalla, A., Negi, S., Subramaniam, L.V., Ramakrishnan, G.: Identification
+  of class specific discourse patterns.
+\newblock In: CIKM, pp. 1193--1202 (2008)
+
+\bibitem{Cybenko_89}
+Cybenko, G.: Dynamic load balancing for distributed memory multiprocessors.
+\newblock Proceedings of the Journal of Parallel and Distributed Computing
+  \textbf{7}, pp. 279--301 (1989)
+
+\bibitem{Du_01a}
+Du, W., Atallah, M.: Privacy-preserving cooperative statistical analysis.
+\newblock In: Proceedings of the 17th Annual Computer Security Applications
+  Conference, ACSAC '01, pp. 102--. Washington, DC, USA (2001).
+\newblock \urlprefix\url{http://dl.acm.org/citation.cfm?id=872016.872181}
+
+\bibitem{Du_01b}
+Du, W., Atallah, M.: Protocols for secure remote database access with
+  approximate matching.
+\newblock In: E-Commerce Security and Privacy, \emph{Advances in Information
+  Security}, vol.~2, pp. 87--111 (2001)
+
+\bibitem{rastogi1999}
+Garofalakis, M.N., Rastogi, R., Shim, K.: Spirit: Sequential pattern mining
+  with regular expression constraints.
+\newblock In: VLDB (1999)
+
+\bibitem{l1Reg}
+Han, Y., Wang, J.: An l1 regularization framework for optimal rule combination.
+\newblock In: ECML/PKDD, year = {2009},
+
+\bibitem{Hyers_52}
+Hyers, D.H., Ulam, S.M.: Approximately convex functions.
+\newblock Proceedings of the American Mathematical Society \textbf{3}(5), pp.
+  821--828 (1952).
+\newblock \urlprefix\url{http://www.jstor.org/stable/2032186}
+
+\bibitem{JawanpuriaNR11}
+Jawanpuria, P., Nath, J.S., Ramakrishnan, G.: Efficient rule ensemble learning
+  using hierarchical kernels.
+\newblock In: ICML, pp. 161--168 (2011)
+
+\bibitem{subseqGap2006}
+Ji, X., Bailey, J., Dong, G.: Mining minimal distinguishing subsequence
+  patterns with gap constraints.
+\newblock Knowledge and Information Systems  (2006)
+
+\bibitem{JoshiRS08}
+Joshi, S., Ramakrishnan, G., Srinivasan, A.: Feature construction using
+  theory-guided sampling and randomised search.
+\newblock In: ILP, pp. 140--157 (2008)
+
+\bibitem{Kempe_03}
+Kempe, D., Dobra, A., Gehrke, J.: Gossip-based computation of aggregate
+  information.
+\newblock In: Foundations of Computer Science, 2003. Proceedings. 44th Annual
+  IEEE Symposium on, pp. 482--491 (2003)
+
+\bibitem{nips2004}
+Kudo, T., Maeda, E., Matsumoto, Y.: An application of boosting to graph
+  classification.
+\newblock In: NIPS (2004)
+
+\bibitem{Larson_77}
+Larson, J., Michalski, R.S.: Inductive inference of vl decision rules.
+\newblock SIGART Bull. (63), 38--44 (1977)
+
+\bibitem{lecun-98a}
+{Le Cun}, Y., Bottou, L., Orr, G.B., M{\"{u}}ller, K.R.: Efficient backprop.
+\newblock In: Neural Networks, Tricks of the Trade, Lecture Notes in Computer
+  Science LNCS~1524. Springer Verlag (1998).
+\newblock \urlprefix\url{http://leon.bottou.org/papers/lecun-98x}
+
+\bibitem{NageshRCKDB12}
+Nagesh, A., Ramakrishnan, G., Chiticariu, L., Krishnamurthy, R., Dharkar, A.,
+  Bhattacharyya, P.: Towards efficient named-entity rule induction for
+  customizability.
+\newblock In: EMNLP-CoNLL, pp. 128--138 (2012)
+
+\bibitem{NairSRK12}
+Nair, N., Saha, A., Ramakrishnan, G., Krishnaswamy, S.: Rule ensemble learning
+  using hierarchical kernels in structured output spaces.
+\newblock In: AAAI (2012)
+
+\bibitem{cvpr2007}
+Nowozin, S., Bakır, G., Tsuda, K.: Discriminative subsequence mining for
+  action classification.
+\newblock In: CVPR (2007)
+
+\bibitem{Pales_02}
+P\'ales, Z.: On approximately convex functions.
+\newblock Proceedings of the American Mathematical Society \textbf{131}(1), pp.
+  243--252 (2002)
+
+\bibitem{pei2004}
+Pei, J.: Mining sequential patterns by pattern-growth: The prefixspan approach.
+\newblock Journal of Machine Learning Research \textbf{16-11} (2004)
+
+\bibitem{han2005}
+Pei, J., Han, J., Wang, W.: Constraint-based sequential pattern mining: the
+  pattern-growth methods.
+\newblock Journal of Intelligent Information Systems  (2005)
+
+\bibitem{han2004}
+Pei, J., Han, J., Yan, X.F.: From sequential pattern mining to structured
+  pattern mining: A pattern-growth approach.
+\newblock Journal of Computer Science and Technology \textbf{9}(3), 257--279
+  (2004)
+
+\bibitem{RamakrishnanJBS07}
+Ramakrishnan, G., Joshi, S., Balakrishnan, S., Srinivasan, A.: Using ilp to
+  construct features for information extraction from semi-structured text.
+\newblock In: ILP, pp. 211--224 (2007)
+
+\bibitem{Amrita12}
+Saha, A., Srinivasan, A., Ramakrishnan, G.: What kinds of relational features
+  are useful for statistical learning?
+\newblock In: ILP (2012)
+
+\bibitem{SpeciaSJRN09}
+Specia, L., Srinivasan, A., Joshi, S., Ramakrishnan, G., das Gra\c{c}as
+  Volpe~Nunes, M.: An investigation into feature construction to assist word
+  sense disambiguation.
+\newblock Machine Learning \textbf{76}(1), 109--136 (2009)
+
+\bibitem{Specia_09}
+Specia, L., Srinivasan, A., Joshi, S., Ramakrishnan, G., Graças Volpe~Nunes,
+  M.: An investigation into feature construction to assist word sense
+  disambiguation.
+\newblock Machine Learning \textbf{76}(1), 109--136 (2009)
+
+\bibitem{SpeciaSRN06}
+Specia, L., Srinivasan, A., Ramakrishnan, G., das Gra\c{c}as Volpe~Nunes, M.:
+  Word sense disambiguation using inductive logic programming.
+\newblock In: ILP, pp. 409--423 (2006)
+
+\bibitem{Tsitsiklis_86}
+Tsitsiklis, J.N., Bertsekas, D.P., Athans, M.: Distributed asynchronous
+  deterministic and stochastic gradient optimization algorithms.
+\newblock In: IEEE Transactions on Automatic Control, vol. AC-31 (1986)
+
+\bibitem{Vaidya_02}
+Vaidya, J., Clifton, C.: Privacy preserving association rule mining in
+  vertically partitioned data.
+\newblock In: Proceedings of the eighth ACM SIGKDD international conference on
+  Knowledge discovery and data mining, KDD '02, pp. 639--644. New York, NY, USA
+  (2002)
+
+\bibitem{Varga_62}
+Varga, R.: Matrix Iterative Analysis.
+\newblock Prentice Hall, Englewood Cliffs, NJ (1962)
+
+\end{thebibliography}

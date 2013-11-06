@@ -1,0 +1,193 @@
+\documentclass[11pt]{article}
+
+\usepackage{url}
+\usepackage{graphicx}
+\usepackage{latexsym}
+\renewcommand{\arraystretch}{1.25}
+\bibliographystyle{abbrv}
+
+\begin{document}
+
+\title{Scaling-Up (Relational) Feature Engineering}
+\author{Ashwin Srinivasan \and Ganesh Ramakrishnan \and  Haimonti Dutta}
+
+\maketitle
+
+\newtheorem{example}{Example}
+
+\section{Background}
+
+The emerging area of statistical relational learning (SRL) is characterised by a number of distinct
+strands of research. Especially prominent is research concerned with the construction of
+parametric and non-parametric  models from data that consist of multiple relations (to a first approximation, the kind of data that
+can be stored in multiple tables of a relational database, although it can get more complicated than this).
+Interest in this form of modelling is driven by at least two different trends:
+\begin{enumerate}
+    \item The data are no longer simply values of known (pre-defined) features, but are in the
+        form of observations of several inter-related variables. {\em Records of messages exchanged in social
+        networks, metabolites and gene-expression levels in an organism responding to an external stimulus,
+        descriptions of the patterns of calls made by a mobile-phone user} are all examples that can generate data of this kind. In
+        such situations, it is often impractical to pre-define all kinds of features that may be of interest;
+        and human expertise may not be available to define new sets of features for each new situation and
+        modelling task.
+    \item The data are now available in very large quantities, largely due to advances in automation
+            and the low-cost of secondary storage. For example, monitoring devices are becoming ubiquitous,
+            allowing us to capture audio, video and physical signals at very high sampling rates. Entire
+            genomes of organisms are sequenced automatically, and call data records stored in a
+            telecommunication network are some other examples. Two difficulties arise: data size,
+            and data quality.
+\end{enumerate}
+
+\noindent
+Scientific research in SRL is concerned principally with different ways of representing the relational
+information; techniques of combining these representations with the calculus of probability; estimation of
+parameters of distributions and inference to yield probabilities with model predictions. The field
+is currently at an early stage, and shows great potential for the modelling of complex systems.
+
+In the older, but related, field of Inductive Logic Programming (ILP), there has been substantial
+work of an engineering flavour specifically aimed at combining relational and statistical modelling that
+may be directly applicable to the kinds of data described here.
+This research consists of the use of ILP systems---programs that are capable
+of learning relations in first-order logic---
+as a tool for discovering useful features for subsequent use by any standard statistical model.The case for this form of data analysis is that the discovery of relational features must necessarily require some form of first-order
+learning, of which ILP systems are an instance.
+Arguments in-principle aside, there are several reports in the literature that augmenting any existing
+features with ILP-discovered relational features can substantially improve the predictive power of a
+statistical model. While this approach is simple, and there appears to be experimental evidence to suggest
+it is effective, much still needs to be done to scale these up to meet modern data and model
+requirements. This includes the abilities to discover features using
+very large datasets stored in secondary memory; from relational data arriving in a streaming mannery; and from
+data which do not conform easily to expected patterns. This project will be concerned with scaling-up relational
+feature-discovery methods to an industrial strength. Specifically, research undertaken will be in the
+following areas:
+
+\begin{description}
+    \item[Conceptual.] The purpose here is to investigate conceptual ways in which relational features and structures on the output space can
+        be discovered or leveraged efficiently. By this we mean: constraints that can be imposed on features and structures without
+        serious loss of expressive power; transformations of the feature-discovery problem to other tasks
+        for which efficient algorithms are known; optimisation formulations that can be solved efficiently, learning and inferencing with structured output 
+	spaces and so on. In conducting this investigation, we will explore building on research concerned with:
+      \begin{description}
+       \item[The Explicit discovery of relational features.] Existing work on discovering a subset of discriminative features from a large, but structured search space adopts one or more of the following strategies that often also impose constraints on the search space: (a) poses the problem as a discrete optimisation problem and solves it optimally~\cite{l1Reg,cvpr2007,nips2004} or heuristically~\cite{JoshiRS08,Amrita12,NageshRCKDB12,ChalamallaNSR08,SpeciaSJRN09,RamakrishnanJBS07,SpeciaSRN06}, (b) poses the problem as a continuous (often convex) optimisation problem with sparsity inducing regularizers and solves it optimally~\cite{JawanpuriaNR11,NairSRK12} and (c) computes all relational features that satisfy some quality criterion by systematically and efficiently exporing a prescribed search space~\cite{pei2004,subseqGap2006,bitSpade,antunes2003,han2005,rakesh1995,han2004,gehrke2002,rastogi1999}
+       \item[Relational Learning with Implicit Feature Maps.] Classifier formulations in terms of kernels facilitate the efficient use of data embedding in extremely high (and sometimes infinite) dimensional feature spaces. 
+       \item[Learning structure on output spaces.]
+       \item[Inference in Relational Models.] Inference problems are of two principal types in relational models: (i) dynamic programming, sampling and variational inference based methods for computing marginal and conditional probabilities and (ii) MAP inference problems, that are essentially discrete optimisation problems~\cite{naveen2010,satLPartition}. 
+      \end{description}
+
+    \item[Implementation.] The purpose here is to investigate the use existing software and hardware infrastructure available
+        for handling big datasets in parallel. By this we mean: mapreduce like methods, the use of approximate
+        theorem-provers; randomised search and so on. In conducting this investigation, we will be building
+        on our research concerned with parallel computation in Inductive Logic Programming~\cite{SrinivasanFJ12,FonsecaSSC09}, procedures for feature-construction with ILP~\cite{CostaSCBDJSVL03,PaesZZPS06,Srinivasan99} and procedures for structure learning~\cite{hipc2010}.
+
+	\iffalse
+	({\bf Ganesh: } Include all work done
+        by me on parallel ILP including recent work on mapreduce and previous work with the Porto group;
+        and also my work on randomised search with Filip and the query transformation work with Vitor et al;
+        and the very old work on data sampling for large search spaces).
+	\fi
+    \item[Application.] The purpose here is to investigate the applicability of feature-based techniques to
+        data analysis tasks of constructing discriminatory and generative models. By this we mean: the use
+        of feature-based representations to construct discriminative models for classification, and generative
+        models like topic models for large relational datasets in areas like text, telecommunications, and biology.
+        In conducting this research, we will be building on our research on applications of relational
+        feature construction to problems requiring discriminatory and generative models (problems such as information extraction and disambiguation)~\cite{NageshRCKDB12,KulkarniSRC09,ChalamallaNSR08,SpeciaSJRN09,RamakrishnanJBS07,SpeciaSRN06}.
+
+\end{description}
+
+\section{Research Programme}
+
+The principal research issues that we will focus on are these:
+
+\begin{enumerate}
+    \item The scaling-up of relational feature-discovery methods to
+        handle data ranging from hundreds of gigabytes to terrabyte-levels; and
+        data arriving in a streaming manner.
+    \item Examining the utility---in terms of improvements in performance or
+        explanatory power---of relational features constructed in this
+        manner for discriminatory and generative models, for applications driven at Yahoo! labs.
+\end{enumerate}
+
+\noindent
+We intend to use the following timeline for the investigation:
+
+\begin{description}
+\item[Month 1--12.] {\it Research \& Development\/.}
+    The conceptual understanding of identifying efficient
+    sub-classes of first-order features; and the development
+    of algorithms for the discovery of features in these sub-classes
+    using standard hardware and software components available
+    for parallel computation.
+\item[Month 12--24.] {\it Testing\/.} The collection of
+    large datasets in key application areas requiring discriminatory
+    or generative models; and the
+    application of techniques developed in Months 1--12 on
+    to identify relational features and construct models.
+\end{description}
+
+\noindent
+The principal deliverables will be in the form of academic
+papers; open-source software; and publically available datasets in a form suitable for
+relational learning.
+
+\section{Personnel}
+
+It is intended that Prof. Ashwin Srinivasan and Prof. Ganesh Ramakrishnan
+should be the faculty members involved in the project. Professor Srinivasan
+has a world-wide reputation in the area of Inductive Logic Programming and
+has been the pioneer of its use in relational feature discovery. His program
+Aleph is probably the most widely used ILP system to date. He has worked
+extensively with Prof. Ramakrishnan, who is currently pursuing probably the
+most active research program in the country on Statistical Relational Learning.
+ Prof. Ramakrishnan is currently at the Indian Institute of
+Technology, Bombay (IIT-B) and Professor Srinivasan is at the Indraprastha Institute of Information
+Technology, Delhi (IIIT-D).
+
+It is proposed that the project employ a post-doctoral candidate or two competent masters students
+on the project. The student will work in the area of efficient feature discovery for constructing discriminatory models with data that could be iid or non-iid.
+
+\iffalse
+Professor Vitor Costa is the perhaps the best-known researcher world-wide on the development
+of efficient first-order theorem provers. He is the principal developer of the Yap Prolog system,
+which is probably the most efficient program of its kind currently available. His research interests in the
+development of efficient techniques for estimation and inference in first-order probabilistic
+models will be invaluable for the project. It is proposed that he be employed as a consultant
+on the project.
+\fi
+
+\iffalse
+\subsection{Other Resources}
+
+\begin{description}
+    \item[Hardware.] This project will involved large-scale testing of data-sets. Such
+        testing is both processor and disk intensive. For the project
+        we will require at least one high-performance computing cluster
+        (we have in mind here something like the Cray CX1).
+    \item[Software.] All software used and developed will be open-source and freely available.
+        Yap Prolog\footnote{\url{http://www.dcc.fc.up.pt/~vsc/Yap/}} could be used as a theorem-prover; and Aleph\footnote{\url{http://www.cs.ox.ac.uk/activities/machlearn/Aleph/}} or extensions
+        of it will be used to implement programs for feature-discovery.
+    \item[Travel and Subsistence.] (a) Travel and subsistence money is required
+        within India to cover collaboration
+        between IIT-B and IIIT-D (b) In order to present the results of the work we will require
+        travel and subsistence money for one person for two conferences each year. Although it is not
+        possible at this stage to say which conferences we will attend,
+        the following is a list of potentially relevant conferences:
+        International Conference on Machine Learning (ICML);
+        International Conference on Data Mining (ICDM);
+        Intenational Joint Conference on Artificial Intelligence (IJCAI); 
+	American Association of Articifical Intelligence (AAAI); 
+        European Conference on Machine Learning; and 
+	International Conference on Inductive Logic Programming
+\fi
+	\iffalse
+	(c) Travel
+        and subsistence money is required for two visits (one in each year) to India
+        by Professor Costa, as part of his consultancy.    
+	\fi
+
+%\end{description}
+
+\bibliography{refs}
+
+\end{document}
+
+
